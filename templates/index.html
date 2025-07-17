@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YOLOv11 Object Detection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      text-align: center;
+    }
+    input[type="file"], input[type="submit"] {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>YOLOv11 Object Detection</h1>
+  <p>Select an image or video to upload and detect objects.</p>
+
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*,video/*" required><br>
+    <input type="submit" value="Upload and Detect">
+  </form>
+</body>
+</html>

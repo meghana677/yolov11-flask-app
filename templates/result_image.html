@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detected Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    img {
+      max-width: 90vw;
+      height: auto;
+      margin: 10px 0;
+      border: 2px solid #333;
+      border-radius: 8px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Detection Result</h1>
+
+  <h3>Input Image:</h3>
+  <img src="{{ url_for('static', filename=input_image) }}" alt="Input Image" />
+
+  <h3>Detected Output:</h3>
+  <img src="{{ url_for('static', filename=output_image) }}" alt="Detected Image" />
+
+  <br />
+  <a href="{{ url_for('index') }}">⬅ Back to Upload</a>
+</body>
+</html>
